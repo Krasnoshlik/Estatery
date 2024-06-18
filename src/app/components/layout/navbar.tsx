@@ -167,7 +167,7 @@ export default function Navbar() {
         <div>
           {likedItems.map((item: itemType,index: number) => {
             return (
-              <LikedItemsCard item={item} key={index}/>
+              <LikedItemsCard item={item} key={index} removeLiked={removeLiked}/>
             )
           })}
           {likedItems.length === 0 && (<div>No liked properties</div>)}
