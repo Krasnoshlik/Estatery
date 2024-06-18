@@ -6,18 +6,18 @@ import { newWayBenefits } from '../../constants/index';
 
 export default function NewWaySection() {
   return (
-    <section className=' flex flex-col gap-12'>
+    <section className=' flex flex-col gap-12 md:flex-row md:justify-between max-w-5xl m-auto sm:items-center'>
 
         <div>
             <div className=' absolute'>
             <div className=' relative top-8 left-8 max-w-[264px] flex flex-col gap-4 items-start'>
-                <h3 className=' font-bold text-[32px] text-dark-purple'>The new way to find your new home</h3>
+                <h3 className=' font-bold text-[30px] text-dark-purple'>The new way to find your new home</h3>
                 <p className=' text-dark-purple font-medium'>Find your dream place to live in with more than 10k+ properties listed.</p>
                 <button className=' rounded-lg bg-dark-purple text-white px-4 py-[10px]'>Browse Properties</button>
             </div>
             </div>
 
-            <Image src={NewWayIcon} alt='NewWayIcon'/>
+            <Image src={NewWayIcon} alt='NewWayIcon' className=' sm:min-w-[327px]'/>
         </div>
 
         <div className=' flex flex-col gap-6'>

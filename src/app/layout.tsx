@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { MyProvider } from './contexts/LickedItems';
 
 // layouts import 
 import Navbar from "./components/layout/navbar";
@@ -20,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={plusJakartaSans.className}>
+      <MyProvider>
         <Navbar/>
-        {children}
+          {children}
         <Footer/>
+      </MyProvider>
       </body>
     </html>
   );

@@ -12,3 +12,24 @@
       display: none;
     }
   }
+
+  .custom-suggestions-container {
+    cursor: pointer;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 10px;
+    color: #100A55;
+    font: medium;
+    margin-top: -4px;
+  }
+  .custom-suggestions-container-second {
+    cursor: pointer;
+    position: absolute;
+    background-color: #F7F7FD;
+    border-radius: 4px;
+    padding: 10px;
+    color: #100A55;
+    font: medium;
+    margin-top: -8px;
+  }

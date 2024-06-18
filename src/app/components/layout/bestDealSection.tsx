@@ -10,7 +10,7 @@ import DealIcon from '../../../../public/icons/DealIcon.png';
 export default function BestDealSection() {
     const [pickedButton, setPickedButton] = useState('t');
   return (
-    <section className=' pt-12 pb-12 flex flex-col items-center gap-12'>
+    <section className=' pt-12 pb-12 flex flex-col items-center gap-12 md:flex-row max-w-5xl m-auto md:justify-center'>
         <div>
 
         <div className=' absolute h-0'>
@@ -38,7 +38,7 @@ export default function BestDealSection() {
         </div>
 
 
-        <div className=' flex flex-col gap-5 items-center'>
+        <div className=' flex flex-col gap-5 items-center md:max-w-md'>
             <div className=' max-w-[328px] border-2 p-2 flex gap-2 rounded-lg bg-[#EFEFFB] text-[#6C727F] font-medium text-lg'>
                 <button className={`px-4 py-2 rounded-md ${pickedButton === 't' ? ' bg-white border text-light-purple font-bold' : null} `} onClick={() => setPickedButton('t')}>For tenants</button>
                 <button className={`px-4 py-2 rounded-md ${pickedButton === 'l' ? ' bg-white border text-light-purple font-bold' : null} `} onClick={() => setPickedButton('l')}>For landlords</button>

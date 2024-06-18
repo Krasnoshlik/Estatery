@@ -10,15 +10,16 @@ import LinkIcon from '../../../../public/icons/linkedin.png';
 
 export default function Footer() {
   return (
-    <footer className=" py-12 px-5">
+    <footer className=" py-12 px-5 max-w-5xl m-auto">
       <div>
-        <div className=" flex items-center gap-1 hover:cursor-pointer">
+        <div className=" sm:flex sm:justify-between sm:border-b-2">
+        <div className=" flex items-center sm:self-start sm:max-h-8 gap-1 hover:cursor-pointer">
           <Image src={Logo} alt="Logo" />
           <h1 className=" text-dark-purple text-xl font-bold">Estatery</h1>
         </div>
 
-        <div className=" py-10 flex justify-between border-b-2">
-          <div className=" flex flex-col gap-7">
+        <div className=" py-10 sm:pt-0 flex sm:flex-col sm:gap-10 justify-between">
+          <div className=" flex flex-col gap-7 sm:flex-row sm:gap-16">
             <div className=" flex flex-col gap-4">
               <h4 className=" font-bold text-sm text-[#000929]">SELL A HOME</h4>
               <div className=" text-sm font-medium flex flex-col gap-2">
@@ -49,7 +50,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className=" flex flex-col gap-7">
+          <div className=" flex flex-col gap-7 sm:flex-row sm:gap-16">
             <div className=" flex flex-col gap-4">
               <h4 className=" font-bold text-sm text-[#000929]">
               TERMS & PRIVACY
@@ -81,6 +82,8 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+
         </div>
 
         <div className=" flex justify-center flex-col w-full text-center gap-5 pt-2 text-[#000929]">
