@@ -3,7 +3,14 @@ import React, { useState, useContext } from "react";
 import Image from "next/image";
 import { slide as Menu } from "react-burger-menu";
 
-import PurpleButton from "../ui/purpleButton";
+
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+  useAuth
+} from '@clerk/nextjs'
 
 import { LikedItemsContext } from '../../contexts/LickedItems';
 import LikedItemsCard from "../ui/likedItemsCard";
@@ -45,6 +52,8 @@ export default function Navbar() {
     setLikedItemsMenu(!likedItemsMenu);
   };
 
+  const { isSignedIn } = useAuth();
+
   return (
     <>
       <nav className="  fixed w-full border-b-[1px] bg-white z-30">
@@ -66,7 +75,7 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className="hidden sm:flex gap-2">
+        <div className="hidden sm:flex gap-2 items-center">
         <div className={`border-2 border-[#E8E6F9] p-2 rounded-xl hover:cursor-pointer ${likedItems.length > 0 ? "bg-amber-300 border-[#7065F0]" : ""}`}
  onClick={togglelikedItemsMenu}>
             <svg
@@ -85,8 +94,17 @@ export default function Navbar() {
               />
             </svg>
           </div>
-          <button className="px-4 border-2 rounded-lg font-bold text-[#000929]">Login</button>
-          <PurpleButton text={"Sign up"} />
+          {!isSignedIn &&
+          <div className=" border-2 border-light-purple px-2 py-1 rounded-md text-dark-purple font-medium">
+          <SignedOut>
+          <SignInButton/>
+        </SignedOut>
+        </div>}
+        <div className=" flex items-center">
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        </div>
         </div>
 
         {/* Mobile view */}
